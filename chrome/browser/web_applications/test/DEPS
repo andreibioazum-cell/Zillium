@@ -1,3 +1,0 @@
-include_rules = [
-  "+chrome/browser/web_applications/isolated_web_apps",
-]

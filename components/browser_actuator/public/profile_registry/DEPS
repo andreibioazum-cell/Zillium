@@ -1,4 +1,0 @@
-include_rules = [
-  # C++ code wraps the entry in google.protobuf.Any directly.
-  "+google/protobuf/any.pb.h",
-]

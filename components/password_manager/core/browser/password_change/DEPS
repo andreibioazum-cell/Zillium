@@ -1,5 +1,0 @@
-specific_include_rules = {
-  "change_password_filling_helper(_unittest)?\\.(h|cc)": [
-    "+components/actor/public/mojom",
-  ],
-}

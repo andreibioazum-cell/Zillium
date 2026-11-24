@@ -1,5 +1,0 @@
-[document web]
-++[section]
-++++[video]
-++++[static] name=' '
-++++[video]

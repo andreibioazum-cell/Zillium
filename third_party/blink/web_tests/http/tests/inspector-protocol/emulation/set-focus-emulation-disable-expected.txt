@@ -1,5 +1,0 @@
-Tests that disabling page focus emulation restores document.hasFocus().
-hasFocus(before emulation): false
-hasFocus(after enable): true
-hasFocus(after disable): false
-

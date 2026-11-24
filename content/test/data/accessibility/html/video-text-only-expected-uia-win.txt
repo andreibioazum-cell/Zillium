@@ -1,5 +1,0 @@
-Document
-++Group IsControlElement=false
-++++Group IsEnabled=false IsControlElement=false
-++++Text Name=' '
-++++Group IsEnabled=false IsControlElement=false

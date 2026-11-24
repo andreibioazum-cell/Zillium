@@ -1,8 +1,0 @@
-=== Start Continuation ===
-AXMenuClosed on AXWebArea
-=== Start Continuation ===
-=== Start Continuation ===
-AXMenuOpened on AXMenu AXDescription='Dynamic menu' AXTitle='Dynamic menu'
-=== Start Continuation ===
-=== Start Continuation ===
-AXMenuClosed on AXWebArea

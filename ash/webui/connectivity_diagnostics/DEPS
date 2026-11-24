@@ -1,4 +1,0 @@
-include_rules = [
-  "+chromeos/resources/grit/chromeos_strings.h",
-  "+chromeos/services/network_health/public",
-]

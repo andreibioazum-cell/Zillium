@@ -1,8 +1,0 @@
-dpapad@chromium.org
-
-# Metrics browser proxy
-per-file metrics_browser_proxy.ts=msramek@chromium.org
-per-file metrics_browser_proxy.ts=file://chrome/browser/resources/settings/privacy_page/OWNERS
-
-# Privacy settings icons
-per-file privacy_icons.html=file://chrome/browser/resources/settings/privacy_page/OWNERS

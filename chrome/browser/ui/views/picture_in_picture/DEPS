@@ -1,5 +1,0 @@
-specific_include_rules = {
-  "picture_in_picture_pin_button\\.cc": [
-    "+ash/strings/grit/ash_strings.h",
-  ],
-}

@@ -1,7 +1,0 @@
-mastiz@chromium.org
-treib@chromium.org
-file://components/sync/OWNERS
-file://CRYPTO_OWNERS
-
-# Support autorollers.
-per-file README.chromium=*

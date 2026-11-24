@@ -1,9 +1,0 @@
-include_rules = [
-  "+base",
-  "+components/content_relationship_verification",
-  "+components/webapk/android/libs/client",
-  "+content/public/android/java/src/org/chromium/content_public",
-  "+content/public/browser",
-  "+content/public/test/android",
-  "+mojo/public/java/system",
-]

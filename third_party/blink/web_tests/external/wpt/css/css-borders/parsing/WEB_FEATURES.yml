@@ -1,5 +1,0 @@
-rules:
-- border-image-*: [border-image]
-- border-radius-*: [border-radius]
-- webkit-border-radius-valid.html: [border-radius]
-- border-*: [borders]

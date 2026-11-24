@@ -1,6 +1,0 @@
-This is a wdspec test.
-[FAIL] test_no_browsing_context
-  AssertionError: assert 'no such element' == 'no such window'
-[FAIL] test_pretty_print_xml
-  AssertionError: assert '' == 'cheese'
-Harness: the test ran to completion.

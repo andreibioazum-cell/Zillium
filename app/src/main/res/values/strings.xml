@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Zillium</string>
+    <string name="url_hint">Поиск или адрес сайта</string>
+    <string name="desc_back">Назад</string>
+    <string name="desc_forward">Вперёд</string>
+    <string name="desc_home">Домой</string>
+    <string name="desc_reload">Обновить</string>
+    <string name="desc_tabs">Вкладки</string>
+    <string name="desc_menu">Меню</string>
+    <string name="desc_clear_url">Очистить</string>
+    <string name="menu_new_tab">Новая вкладка</string>
+    <string name="menu_incognito">Режим инкогнито</string>
+    <string name="menu_desktop_site">Версия для ПК</string>
+    <string name="menu_bookmarks">Закладки</string>
+    <string name="menu_add_bookmark">В закладки</string>
+    <string name="menu_share">Поделиться</string>
+    <string name="menu_clear_data">Очистить данные браузера</string>
+    <string name="toast_bookmark_added">Добавлено в закладки</string>
+    <string name="toast_data_cleared">История, кэш и cookies очищены</string>
+    <string name="toast_incognito_on">Режим инкогнито включён</string>
+    <string name="toast_incognito_off">Обычный режим</string>
+    <string name="tabs_title">Открытые вкладки</string>
+    <string name="bookmarks_title">Закладки</string>
+    <string name="bookmarks_empty">Закладок пока нет</string>
+    <string name="btn_new_tab">+ Новая вкладка</string>
+    <string name="btn_close">Закрыть</string>
+</resources>

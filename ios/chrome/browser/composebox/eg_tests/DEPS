@@ -1,6 +1,0 @@
-include_rules = [
-  # keep-sorted start
-  "+ios/chrome/browser/aim/model",
-  "+third_party/omnibox_proto",
-  # keep-sorted end
-]

@@ -1,6 +1,0 @@
-include_rules = [
-  "+components/os_crypt/async",
-  "+crypto",
-  "+sql",
-  "+third_party/sqlite",
-]

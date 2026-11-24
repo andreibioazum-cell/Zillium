@@ -1,3 +1,0 @@
-# For sandbox security review.
-per-file *.cml=set noparent
-per-file *.cml=file://build/fuchsia/SECURITY_OWNERS

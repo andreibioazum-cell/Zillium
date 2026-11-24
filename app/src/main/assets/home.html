@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Zillium</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card: #1e293b;
+            --card-hover: #334155;
+            --primary: #6366f1;
+            --accent: #22d3ee;
+            --text: #f8fafc;
+            --muted: #94a3b8;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: radial-gradient(circle at top, #1e1b4b 0%, var(--bg) 60%);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 48px 20px 32px;
+        }
+        .logo {
+            font-size: 38px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 6px;
+        }
+        .subtitle {
+            font-size: 13px;
+            color: var(--muted);
+            margin-bottom: 32px;
+        }
+        .search-box {
+            width: 100%;
+            max-width: 460px;
+            display: flex;
+            background: var(--card);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 28px;
+            padding: 6px 6px 6px 18px;
+            margin-bottom: 36px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+        }
+        .search-box input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: var(--text);
+            font-size: 15px;
+        }
+        .search-box input::placeholder {
+            color: var(--muted);
+        }
+        .search-box button {
+            background: linear-gradient(135deg, var(--primary), #4f46e5);
+            color: white;
+            border: none;
+            border-radius: 22px;
+            padding: 10px 18px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .grid {
+            width: 100%;
+            max-width: 460px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+        }
+        .tile {
+            background: var(--card);
+            border-radius: 16px;
+            padding: 14px 8px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text);
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: transform 0.15s ease, background 0.15s ease;
+        }
+        .tile:active {
+            transform: scale(0.95);
+            background: var(--card-hover);
+        }
+        .tile-icon {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto 8px;
+            border-radius: 12px;
+            background: rgba(99, 102, 241, 0.18);
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+        }
+        .tile-label {
+            font-size: 12px;
+            color: var(--muted);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">Zillium</div>
+    <div class="subtitle">Быстрый мобильный браузер</div>
+
+    <form class="search-box" onsubmit="handleSearch(event)">
+        <input id="q" type="text" placeholder="Поиск в интернете или URL..." autocomplete="off" />
+        <button type="submit">Найти</button>
+    </form>
+
+    <div class="grid">
+        <a class="tile" href="https://www.google.com">
+            <div class="tile-icon">G</div>
+            <div class="tile-label">Google</div>
+        </a>
+        <a class="tile" href="https://duckduckgo.com">
+            <div class="tile-icon">D</div>
+            <div class="tile-label">DuckDuckGo</div>
+        </a>
+        <a class="tile" href="https://www.youtube.com">
+            <div class="tile-icon">Y</div>
+            <div class="tile-label">YouTube</div>
+        </a>
+        <a class="tile" href="https://github.com">
+            <div class="tile-icon">GH</div>
+            <div class="tile-label">GitHub</div>
+        </a>
+        <a class="tile" href="https://ru.wikipedia.org">
+            <div class="tile-icon">W</div>
+            <div class="tile-label">Wikipedia</div>
+        </a>
+        <a class="tile" href="https://habr.com">
+            <div class="tile-icon">H</div>
+            <div class="tile-label">Habr</div>
+        </a>
+        <a class="tile" href="https://www.reddit.com">
+            <div class="tile-icon">R</div>
+            <div class="tile-label">Reddit</div>
+        </a>
+        <a class="tile" href="https://news.ycombinator.com">
+            <div class="tile-icon">HN</div>
+            <div class="tile-label">HackerNews</div>
+        </a>
+    </div>
+
+    <script>
+        function handleSearch(e) {
+            e.preventDefault();
+            var val = document.getElementById('q').value.trim();
+            if (!val) return;
+            if (/^(https?:\/\/)/i.test(val)) {
+                window.location.href = val;
+            } else if (val.indexOf(' ') === -1 && val.indexOf('.') !== -1) {
+                window.location.href = 'https://' + val;
+            } else {
+                window.location.href = 'https://duckduckgo.com/?q=' + encodeURIComponent(val);
+            }
+        }
+    </script>
+</body>
+</html>

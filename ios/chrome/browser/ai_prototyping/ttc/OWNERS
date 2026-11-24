@@ -1,4 +1,0 @@
-# For non-iOS specific changes (e.g. interface changes in the core directories)
-file://chrome/browser/ttc/OWNERS
-
-christianxu@chromium.org

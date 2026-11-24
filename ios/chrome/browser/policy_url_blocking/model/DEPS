@@ -1,6 +1,0 @@
-include_rules = [
-  "+components/safe_search_api",
-  "+components/url_matcher",
-  "+net/traffic_annotation",
-  "+services/network/public/cpp",
-]

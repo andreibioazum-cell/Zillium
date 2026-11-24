@@ -1,5 +1,0 @@
-include_rules = [
-  "+components/web_distiller",
-  "-content/public/android/java",
-  "+content/public/android/java/src/org/chromium/content_public",
-]

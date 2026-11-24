@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Zillium" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/zillium_primary</item>
+        <item name="colorPrimaryDark">@color/zillium_bg</item>
+        <item name="colorSecondary">@color/zillium_accent</item>
+        <item name="android:statusBarColor">@color/zillium_bg</item>
+        <item name="android:navigationBarColor">@color/zillium_surface</item>
+        <item name="android:windowBackground">@color/zillium_bg</item>
+    </style>
+</resources>

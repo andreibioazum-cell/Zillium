@@ -1,5 +1,0 @@
-specific_include_rules = {
-  "usb_pinned_notification\\.cc": [
-    "+ash/strings/grit/ash_strings.h",
-  ],
-}

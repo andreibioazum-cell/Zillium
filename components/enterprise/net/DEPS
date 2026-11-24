@@ -1,9 +1,0 @@
-include_rules = [
-  "+components/error_page/common",
-  "+components/tabs/public",
-  "+content/public/browser",
-  "+content/public/test",
-  "+ui/base/l10n",
-  "+ui/base/page_transition_types.h",
-  "+ui/base/unowned_user_data",
-]

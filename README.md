@@ -1,21 +1,27 @@
-# ![Logo](chrome/app/theme/chromium/product_logo_64.png) Chromium
+# Zillium (Mobile Android Browser)
 
-Chromium is an open-source browser project that aims to build a safer, faster,
-and more stable way for all users to experience the web.
+**Zillium** — лёгкий и быстрый мобильный браузер только для Android (десктопная версия полностью убрана). Проект настроен для автоматической сборки APK через GitHub Actions.
 
-The project's web site is https://www.chromium.org.
+## Возможности
+- **Мобильный интерфейс**: адресная строка сверху и удобная нижняя панель навигации (`Назад`, `Вперёд`, `Домой`, `Вкладки`).
+- **Вкладки**: поддержка нескольких вкладок с быстрым переключением и закрытием.
+- **Приватность**: режим инкогнито (без сохранения истории, кэша и cookies) и очистка данных в один клик.
+- **Закладки и стартовая страница**: встроенная стартовая страница с быстрым доступом и локальные закладки.
+- **Полноценный веб**: поддержка полноэкранного видео, скачивания файлов (`DownloadManager`), Pull-to-Refresh и переключения в режим «Версия для ПК».
 
-To check out the source code locally, don't use `git clone`! Instead,
-follow [the instructions on how to get the code](docs/get_the_code.md).
+## Сборка через GitHub Actions (Workflow)
+Сборка происходит автоматически через [`.github/workflows/android-build.yml`](.github/workflows/android-build.yml):
+- При любом `push` или `pull_request` (а также вручную через **Actions -> Build Android APK -> Run workflow**).
+- В артефактах запуска доступны готовые к установке файлы:
+  - `zillium-android-debug-apk` (`app-debug.apk`)
+  - `zillium-android-release-apk` (`app-release.apk`)
+- При отправке тега вида `v1.0.0` автоматически создаётся GitHub Release с прикреплёнными APK.
 
-Documentation in the source is rooted in [docs/README.md](docs/README.md).
+## Локальная сборка
+Требуется JDK 17 и Android SDK (API 35):
 
-Learn how to [Get Around the Chromium Source Code Directory
-Structure](https://www.chromium.org/developers/how-tos/getting-around-the-chrome-source-code).
+```bash
+./gradlew assembleDebug assembleRelease
+```
 
-For historical reasons, there are some small top level directories. Now the
-guidance is that new top level directories are for product (e.g. Chrome,
-Android WebView, Ash). Even if these products have multiple executables, the
-code should be in subdirectories of the product.
-
-If you found a bug, please file it at https://crbug.com/new.
+Готовые APK появятся в `app/build/outputs/apk/`.

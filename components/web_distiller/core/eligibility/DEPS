@@ -1,5 +1,0 @@
-include_rules = [
-  "+components/google/core/common",
-  "+components/optimization_guide/core/hints",
-  "+components/optimization_guide/proto",
-]
